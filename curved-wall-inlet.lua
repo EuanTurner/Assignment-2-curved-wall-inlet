@@ -10,7 +10,7 @@ setGasModel('ideal-air.gas')
 
 M_inf = 6.42
 p_inf = 1354 -- Pa
-T_inf = 273.0 -- K (subject to change, currently placeholder)
+T_inf = 273.0 -- K
 
 initial = FlowState:new{p=p_inf, T=T_inf}
 inflow = FlowState:new{p=p_inf, T=T_inf, velx=M_inf*initial.a, vely=0.0}
@@ -36,7 +36,9 @@ e = Vector3:new{x=Cx, y=Cy}
 f = Vector3:new{x=Ax, y=Ay}
 
 -- bezier control point 
-b1 = Vector3:new{x=Bx, y=By} -- free paramter
+b1 = Vector3:new{x=0.9, y=0.435} -- free paramter
+-- x = Bx = 0.988, y = By = 0.299 (first test)
+-- x = 
 
 --First geometry block
 af = Line:new{p0=a, p1=f}
