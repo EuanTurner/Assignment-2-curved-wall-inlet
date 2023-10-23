@@ -36,7 +36,7 @@ e = Vector3:new{x=Cx, y=Cy}
 f = Vector3:new{x=Ax, y=Ay}
 
 -- bezier control point 
-b1 = Vector3:new{x=0.9, y=0.435} -- free paramter
+b1 = Vector3:new{x=0.9, y=0.4365} -- free paramter
 -- x = Bx = 0.988, y = By = 0.299 (first test)
 -- x = 
 
