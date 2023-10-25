@@ -1,0 +1,35 @@
+grid size: i=81, j=41
+bezier control point: (x=0.90, y=0.4365)
+
+5.64e4 is the analytic throat value
+
+P_throat_successive_val_pyth = 5.646048e+04 (time: 1.500323e-03)
+P_throat_last_val = 5.569331506929060561e+04 (time: sim_time_end)
+P-total-throat-entrance-ave = 1.451862e+06
+
+grid size: i=81, j=41
+bezier control point: (x=0.91, y=0.4365)
+
+5.64e4 is the analytic throat value
+
+P_throat_successive_val_pyth = 5.736476e+04 (time: 1.500194e-03)
+P_throat_last_val = 5.737473573508878326e+04 (time: sim_time_end)
+P-total-throat-entrance-ave = 1.836915e+06
+
+grid size: i=81, j=41
+bezier control point: (x=0.905, y=0.4365)
+
+5.64e4 is the analytic throat value
+
+P_throat_successive_val_pyth = 5.690704e+04 (time: 1.500255e-03)
+P_throat_last_val = 5.737473573508878326e+04 (time: sim_time_end)
+P-total-throat-entrance-ave = 1.825454e+06
+
+grid size: i=81, j=41
+bezier control point: (x=0.9025, y=0.4365)
+
+5.64e4 is the analytic throat value
+
+P_throat_successive_val_pyth = 5.690704e+04 (time: 1.500255e-03)
+P_throat_last_val = 5.737473573508878326e+04 (time: sim_time_end)
+P-total-throat-entrance-ave = 1.822204e+06

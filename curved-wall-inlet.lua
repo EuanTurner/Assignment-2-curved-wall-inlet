@@ -10,7 +10,7 @@ setGasModel('ideal-air.gas')
 
 M_inf = 6.42
 p_inf = 1354 -- Pa
-T_inf = 273.0 -- K
+T_inf = 273 -- K
 
 initial = FlowState:new{p=p_inf, T=T_inf}
 inflow = FlowState:new{p=p_inf, T=T_inf, velx=M_inf*initial.a, vely=0.0}
@@ -36,10 +36,9 @@ e = Vector3:new{x=Cx, y=Cy}
 f = Vector3:new{x=Ax, y=Ay}
 
 -- bezier control point 
-b1 = Vector3:new{x=0.9, y=0.4365} -- free paramter
+b1 = Vector3:new{x=0.9025, y=0.4365} -- free paramter
 -- x = Bx = 0.988, y = By = 0.299 (first test)
--- x = 
-
+-- x = 0.9025, y=0.4365
 --First geometry block
 af = Line:new{p0=a, p1=f}
 be = Line:new{p0=b, p1=e}
@@ -62,8 +61,8 @@ patch[1] = CoonsPatch:new{
 }
 
 grid={}
-grid[0] = StructuredGrid:new{psurface=patch[0], niv=81, njv=41}
-grid[1] = StructuredGrid:new{psurface=patch[1], niv=81, njv=41}
+grid[0] = StructuredGrid:new{psurface=patch[0], niv=41, njv=21} --81, 41
+grid[1] = StructuredGrid:new{psurface=patch[1], niv=41, njv=21}
 
 blk0 = FluidBlock:new{grid=grid[0], initialState=inflow,
                         bcList={west=InFlowBC_Supersonic:new{flowState=inflow}}    
@@ -82,6 +81,6 @@ config.flux_calculator = "ausmdv"
 config.dt_plot = config.max_time/100 --100 frames?
 config.dt_history = 1.0e-5
 
-setHistoryPoint{x=f.x, y=f.y} --at the inflow wall top left
-setHistoryPoint{x=d.x, y=d.y} --at the outflow wall top
+-- setHistoryPoint{x=f.x, y=f.y} --at the inflow wall top left
+-- setHistoryPoint{x=d.x, y=d.y} --at the outflow wall top
 setHistoryPoint{x=e.x+(d.x - e.x)/2, y=e.y/2} -- capture the pressure inside of the throat
