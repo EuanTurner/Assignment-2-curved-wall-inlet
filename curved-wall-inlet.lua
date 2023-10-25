@@ -39,6 +39,7 @@ f = Vector3:new{x=Ax, y=Ay}
 b1 = Vector3:new{x=0.9025, y=0.4365} -- free paramter
 -- x = Bx = 0.988, y = By = 0.299 (first test)
 -- x = 0.9025, y=0.4365
+
 --First geometry block
 af = Line:new{p0=a, p1=f}
 be = Line:new{p0=b, p1=e}
